@@ -1,0 +1,12 @@
+{{title}}
+<!--Centriamo la mappa alle nostre coordinate-->
+<google-map [center]="center">  
+  <!--Mettiamo un marker alle nostre coordinate-->
+  <map-marker *ngfor= ' let c of coordinate'[position]="c" [label]="label >
+  </map-marker>
+
+  <map-circle [center]="position"
+              [radius]="30000"
+              [options] = 'circleOptions'>
+  </map-circle>
+</google-map>
